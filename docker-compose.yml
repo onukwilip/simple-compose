@@ -3,8 +3,8 @@ version: "3.8"
 services:
   frontend:
     image: ghcr.io/onukwilip/meshery-practice-frontend:latest
-    expose:
-      - "3000:3000" # internal only
+    ports:
+      - 3000:3000 # internal only
     environment:
       BACKEND_A: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-a
       BACKEND_B: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-b
@@ -13,8 +13,8 @@ services:
 
   backendA:
     image: ghcr.io/onukwilip/meshery-practice-backend-a:latest
-    expose:
-      - "5000:5000"
+    ports:
+      - 5000:5000
     environment:
       BACKEND_A: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-a
       BACKEND_B: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-b
@@ -23,8 +23,8 @@ services:
 
   backendB:
     image: ghcr.io/onukwilip/meshery-practice-backend-b:latest
-    expose:
-      - "6000:6000"
+    ports:
+      - 6000:6000
     environment:
       BACKEND_A: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-a
       BACKEND_B: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-b
