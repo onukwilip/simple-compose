@@ -2,9 +2,9 @@ version: "3.8"
 
 services:
   frontend:
-    image: ghcr.io/onukwilip/meshery-practice-frontend:latest
+    image: nginx:latest
     ports:
-      - 3000:3000 # internal only
+      - 3000:80 # internal only
     environment:
       BACKEND_A: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-a
       BACKEND_B: http://ec2-konstack-de-alb-945433687.us-west-1.elb.amazonaws.com/backend-b
