@@ -6,8 +6,8 @@ services:
     ports:
       - 3000:3000
     environment:
-      BACKEND_A: http://ec2-konstack-de-alb-841353427.us-west-1.elb.amazonaws.com/backend-a/
-      BACKEND_B: http://ec2-konstack-de-alb-841353427.us-west-1.elb.amazonaws.com/backend-b/
+      BACKEND_A: http://ec2-konstack-de-alb-2037580261.us-west-1.elb.amazonaws.com/backend-a/
+      BACKEND_B: http://ec2-konstack-de-alb-2037580261.us-west-1.elb.amazonaws.com/backend-b/
     networks:
       - prod
 
@@ -16,8 +16,8 @@ services:
     ports:
       - 5000:5000
     environment:
-      BACKEND_A: http://ec2-konstack-de-alb-841353427.us-west-1.elb.amazonaws.com/backend-a/
-      BACKEND_B: http://ec2-konstack-de-alb-841353427.us-west-1.elb.amazonaws.com/backend-b/
+      BACKEND_A: http://ec2-konstack-de-alb-2037580261.us-west-1.elb.amazonaws.com/backend-a/
+      BACKEND_B: http://ec2-konstack-de-alb-2037580261.us-west-1.elb.amazonaws.com/backend-b/
     networks:
       - prod
 
@@ -26,8 +26,8 @@ services:
     ports:
       - 6000:6000
     environment:
-      BACKEND_A: http://ec2-konstack-de-alb-841353427.us-west-1.elb.amazonaws.com/backend-a/
-      BACKEND_B: http://ec2-konstack-de-alb-841353427.us-west-1.elb.amazonaws.com/backend-b/
+      BACKEND_A: http://ec2-konstack-de-alb-2037580261.us-west-1.elb.amazonaws.com/backend-a/
+      BACKEND_B: http://ec2-konstack-de-alb-2037580261.us-west-1.elb.amazonaws.com/backend-b/
     networks:
       - prod
 
